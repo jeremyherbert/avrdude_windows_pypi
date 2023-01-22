@@ -1,0 +1,37 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pip
+        run: apt install -y python3-pip python3-setuptools unzip wget
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: install python dependencies
+        run: pip3 install -r ${{ github.workspace }}/avrdude_windows/requirements.txt
+
+
+
+      - name: Download and unzip avrdude
+        run: |
+          cd ${{ github.workspace }}/avrdude_windows/avrdude_binaries
+          mkdir -p x32
+          cd x32
+          wget "https://github.com/avrdudes/avrdude/releases/download/v7.1/avrdude-v7.1-windows-x32.zip"
+          unzip avrdude-v7.1-windows-x32.zip
+          rm avrdude-v7.1-windows-x32.zip
+          
+          cd ..
+          mkdir -p x64
+          cd x64
+          wget "https://github.com/avrdudes/avrdude/releases/download/v7.1/avrdude-v7.1-windows-x64.zip"
+          unzip avrdude-v7.1-windows-x64.zip
+          rm avrdude-v7.1-windows-x64.zip
+
+      - name: Build wheel
+        run: python3 -m build
+        working-directory: ${{ github.workspace }}
