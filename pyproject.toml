@@ -10,4 +10,8 @@ classifiers = [
 "Homepage" = "https://github.com/jeremyherbert/avrdude_windows_pypi"
 
 [tool.setuptools]
-packages = ["avrdude_windows"]
+packages = [
+    "avrdude_windows",
+    "avrdude_windows.avrdude_binaries.x32",
+    "avrdude_windows.avrdude_binaries.x64"
+]
