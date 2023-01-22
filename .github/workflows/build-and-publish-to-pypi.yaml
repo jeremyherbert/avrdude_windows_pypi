@@ -1,12 +1,11 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: avrdude_windows build and push script
 on: [push]
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Install pip
-        run: apt install -y python3-pip python3-setuptools unzip wget
+        run: sudo apt install -y python3-pip python3-setuptools unzip wget git
 
       - name: Check out repository code
         uses: actions/checkout@v3
