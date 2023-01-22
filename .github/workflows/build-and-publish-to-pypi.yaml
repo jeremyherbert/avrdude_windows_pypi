@@ -20,7 +20,7 @@ jobs:
           cd ${{ github.workspace }}/avrdude_windows/avrdude_binaries
           mkdir -p x32
           cd x32
-          wget "https://github.com/avrdudes/avrdude/releases/download/v7.1/avrdude-v7.1-windows-x32.zip"
+          wget "https://github.com/avrdudes/avrdude/releases/download/v7.1/avrdude-v7.1-windows-x86.zip"
           unzip avrdude-v7.1-windows-x32.zip
           rm avrdude-v7.1-windows-x32.zip
           
