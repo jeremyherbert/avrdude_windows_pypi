@@ -1,6 +1,6 @@
 [project]
 name = "avrdude_windows"
-version = "0.1.2"
+version = "7.1.0"
 description = "A pypi package containing avrdude binaries for Windows"
 readme = "README.md"
 classifiers = [
