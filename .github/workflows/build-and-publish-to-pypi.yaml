@@ -21,8 +21,8 @@ jobs:
           mkdir -p x32
           cd x32
           wget "https://github.com/avrdudes/avrdude/releases/download/v7.1/avrdude-v7.1-windows-x86.zip"
-          unzip avrdude-v7.1-windows-x32.zip
-          rm avrdude-v7.1-windows-x32.zip
+          unzip avrdude-v7.1-windows-x86.zip
+          rm avrdude-v7.1-windows-x86.zip
           
           cd ..
           mkdir -p x64
