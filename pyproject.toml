@@ -1,0 +1,13 @@
+[project]
+name = "avrdude_windows"
+version = "7.1.0"
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Software Development :: Embedded Systems"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jeremyherbert/avrdude_windows_pypi"
+
+[tool.setuptools]
+packages = ["avrdude_windows"]

@@ -1,0 +1,4 @@
+build/
+dist/
+avrdude_windows/avrdude_binaries/x*/
+*.egg-info
