@@ -13,8 +13,6 @@ jobs:
       - name: install python dependencies
         run: pip3 install -r ${{ github.workspace }}/requirements.txt
 
-
-
       - name: Download and unzip avrdude
         run: |
           cd ${{ github.workspace }}/avrdude_windows/avrdude_binaries
@@ -33,4 +31,8 @@ jobs:
 
       - name: Build wheel
         run: python3 -m build
+        working-directory: ${{ github.workspace }}
+
+      - name: Publish to pypi
+        run: python3 -m twine upload -u "${{ secrets.twine_username }}" -p "${{ secrets.twine_password }}" dist/*
         working-directory: ${{ github.workspace }}

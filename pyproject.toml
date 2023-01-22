@@ -1,6 +1,6 @@
 [project]
 name = "avrdude_windows"
-version = "7.1.0"
+version = "0.1.1"
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Topic :: Software Development :: Embedded Systems"
